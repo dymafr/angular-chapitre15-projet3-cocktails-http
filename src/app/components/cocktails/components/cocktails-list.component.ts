@@ -84,7 +84,7 @@ export class CocktailsListComponent {
       case 'ArrowUp':
       case 'ArrowDown': {
         const selectedCocktailId = this.selectedCocktailId();
-        const cocktails = this.cocktails();
+        const cocktails = this.filteredCocktails();
         if (cocktails?.length) {
           if (selectedCocktailId) {
             const index = cocktails.findIndex(
