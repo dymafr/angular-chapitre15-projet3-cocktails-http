@@ -3,7 +3,7 @@ import { Injectable, signal } from '@angular/core';
 @Injectable({
   providedIn: 'root',
 })
-export class CartService {
+export class CartDataClient {
   likedCocktailIds = signal<string[]>([]);
 
   likeCocktail(cocktailId: string) {

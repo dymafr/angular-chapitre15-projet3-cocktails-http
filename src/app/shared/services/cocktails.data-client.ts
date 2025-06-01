@@ -4,7 +4,7 @@ import { Cocktail } from '../interfaces';
 @Injectable({
   providedIn: 'root',
 })
-export class CocktailsService {
+export class CocktailsDataClient {
   BASE_URL = 'https://restapi.fr/api/acocktails';
 
   cocktailsResource = resource({

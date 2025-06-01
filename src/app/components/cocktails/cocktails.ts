@@ -1,12 +1,12 @@
 import { Component, computed, inject, signal } from '@angular/core';
-import { CocktailsListComponent } from './components/cocktails-list.component';
-import { CocktailDetailsComponent } from './components/cocktail-details.component';
-import { CocktailsService } from 'app/shared/services/cocktails.service';
-import { CartService } from 'app/shared/services/cart.service';
+import { CocktailsList } from './components/cocktails-list';
+import { CocktailDetails } from './components/cocktail-details';
+import { CocktailsDataClient } from 'app/shared/services/cocktails.data-client';
+import { CartDataClient } from 'app/shared/services/cart.data-client';
 
 @Component({
   selector: 'app-cocktails',
-  imports: [CocktailsListComponent, CocktailDetailsComponent],
+  imports: [CocktailsList, CocktailDetails],
   template: `
     <app-cocktails-list
       [(selectedCocktailId)]="selectedCocktailId"
@@ -37,9 +37,9 @@ import { CartService } from 'app/shared/services/cart.service';
     }
   `,
 })
-export class CocktailsComponent {
-  cocktailsService = inject(CocktailsService);
-  cartService = inject(CartService);
+export class Cocktails {
+  cocktailsService = inject(CocktailsDataClient);
+  cartService = inject(CartDataClient);
 
   cocktails = computed(
     () => this.cocktailsService.cocktailsResource.value() || []

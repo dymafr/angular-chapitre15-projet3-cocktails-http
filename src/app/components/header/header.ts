@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { HeaderMenuComponent } from './components/header-menu.component';
+import { HeaderMenu } from './components/header-menu';
 
 @Component({
   selector: 'app-header',
-  imports: [HeaderMenuComponent],
+  imports: [HeaderMenu],
   template: `
     <div class="flex-auto text-bold text-lg">Cocktails</div>
     <ul class="xs-hide flex flex-row gap-16">
@@ -28,4 +28,4 @@ import { HeaderMenuComponent } from './components/header-menu.component';
     }
   `,
 })
-export class HeaderComponent {}
+export class Header {}

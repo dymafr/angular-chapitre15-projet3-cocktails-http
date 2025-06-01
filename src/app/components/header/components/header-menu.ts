@@ -35,7 +35,7 @@ import { Component, signal } from '@angular/core';
     }
   `,
 })
-export class HeaderMenuComponent {
+export class HeaderMenu {
   show = signal(false);
   navigations = [
     {
